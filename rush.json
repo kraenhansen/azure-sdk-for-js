@@ -1922,6 +1922,11 @@
       "packageName": "@azure/arm-storagemover",
       "projectFolder": "sdk/storagemover/arm-storagemover",
       "versionPolicyName": "management"
+    },
+    {
+      "packageName": "@azure-rest/batch",
+      "projectFolder": "sdk/batch/batch-rest",
+      "versionPolicyName": "client"
     }
   ]
 }

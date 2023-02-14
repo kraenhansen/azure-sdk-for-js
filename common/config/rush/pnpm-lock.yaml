@@ -213,6 +213,7 @@ specifiers:
   '@rush-temp/arm-workloads': file:./projects/arm-workloads.tgz
   '@rush-temp/arm-workspaces': file:./projects/arm-workspaces.tgz
   '@rush-temp/attestation': file:./projects/attestation.tgz
+  '@rush-temp/batch': file:./projects/batch.tgz
   '@rush-temp/communication-alpha-ids': file:./projects/communication-alpha-ids.tgz
   '@rush-temp/communication-chat': file:./projects/communication-chat.tgz
   '@rush-temp/communication-common': file:./projects/communication-common.tgz
@@ -541,6 +542,7 @@ dependencies:
   '@rush-temp/arm-workloads': file:projects/arm-workloads.tgz
   '@rush-temp/arm-workspaces': file:projects/arm-workspaces.tgz
   '@rush-temp/attestation': file:projects/attestation.tgz
+  '@rush-temp/batch': file:projects/batch.tgz
   '@rush-temp/communication-alpha-ids': file:projects/communication-alpha-ids.tgz
   '@rush-temp/communication-chat': file:projects/communication-chat.tgz
   '@rush-temp/communication-common': file:projects/communication-common.tgz
@@ -15416,6 +15418,48 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  file:projects/batch.tgz:
+    resolution: {integrity: sha512-/GRv0kaBEoA6YKGWXGE4EKptMIH17AaDAtBG8xq4OLu5HzXrO5dHOngJXMZ9ti3InH/92/J0nx17lj4LCn0nQg==, tarball: file:projects/batch.tgz}
+    name: '@rush-temp/batch'
+    version: 0.0.0
+    dependencies:
+      '@azure-rest/core-client': 1.0.0-beta.10
+      '@azure/identity': 2.1.0
+      '@microsoft/api-extractor': 7.34.3_@types+node@14.18.36
+      '@types/chai': 4.3.4
+      '@types/mocha': 7.0.2
+      '@types/node': 14.18.36
+      autorest: 3.6.3
+      chai: 4.3.7
+      cross-env: 7.0.3
+      dotenv: 16.0.3
+      eslint: 8.33.0
+      karma: 6.4.1
+      karma-chrome-launcher: 3.1.1
+      karma-coverage: 2.2.0
+      karma-env-preprocessor: 0.1.1
+      karma-firefox-launcher: 1.3.0
+      karma-junit-reporter: 2.0.1_karma@6.4.1
+      karma-mocha: 2.0.1
+      karma-mocha-reporter: 2.2.5_karma@6.4.1
+      karma-source-map-support: 1.4.0
+      karma-sourcemap-loader: 0.3.8
+      mkdirp: 2.1.3
+      mocha: 7.2.0
+      mocha-junit-reporter: 1.23.3_mocha@7.2.0
+      nyc: 15.1.0
+      prettier: 2.8.3
+      rimraf: 3.0.2
+      source-map-support: 0.5.21
+      tslib: 2.5.0
+      typescript: 4.8.4
+    transitivePeerDependencies:
       - bufferutil
       - debug
       - supports-color
