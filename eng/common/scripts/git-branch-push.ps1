@@ -100,7 +100,12 @@ else {
 
 # Explicitly set this to null so that PS command line parser doesn't try to parse and pass it as ""
 if ($PushArgs -eq "") {
+    Write-Host "PushArgs is empty"
     $PushArgs = $null
+}
+
+if ($PushArgs -eq $null) {
+    Write-Host "PushArgs is null"
 }
 
 # The number of retries can be increased if necessary. In theory, the number of retries
@@ -114,8 +119,11 @@ $tryNumber = 0
 do
 {
     $needsRetry = $false
-    Write-Host "git push $RemoteName $PRBranchName $PushArgs"
+    Write-Host "[git push $RemoteName $PRBranchName $PushArgs]"
     git push $RemoteName $PRBranchName $PushArgs
+    
+    Write-Host "[NOPUSHARGS git push $RemoteName $PRBranchName]"
+    git push $RemoteName $PRBranchName
     $tryNumber++
     if ($LASTEXITCODE -ne 0)
     {
