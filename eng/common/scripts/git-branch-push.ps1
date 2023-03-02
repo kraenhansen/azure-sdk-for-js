@@ -122,8 +122,8 @@ do
     Write-Host "[git push $RemoteName $PRBranchName $PushArgs]"
     git push $RemoteName $PRBranchName $PushArgs
     
-    Write-Host "[NOPUSHARGS git push $RemoteName $PRBranchName]"
-    git push $RemoteName $PRBranchName
+    #Write-Host "[NOPUSHARGS git push $RemoteName $PRBranchName]"
+    #git push $RemoteName $PRBranchName
     $tryNumber++
     if ($LASTEXITCODE -ne 0)
     {
